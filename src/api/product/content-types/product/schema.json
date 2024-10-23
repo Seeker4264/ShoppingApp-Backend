@@ -40,18 +40,23 @@
       "default": false,
       "required": true
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "products"
-    },
     "discountPercentage": {
       "type": "integer",
       "required": true,
       "min": 0,
       "default": 10,
       "max": 100
+    },
+    "categoryId": {
+      "type": "biginteger",
+      "min": "0",
+      "required": true
+    },
+    "productId": {
+      "type": "biginteger",
+      "min": "0",
+      "unique": true,
+      "required": true
     }
   }
 }
